@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:nitcattendify/admin.dart';
+import 'package:nitcattendify/studentpage.dart';
 
 class LoginApp extends StatelessWidget {
   @override
@@ -118,14 +120,26 @@ class _LoginPageState extends State<LoginPage> {
 
     if (_selectedRole == 'Admin') {
       if (username == adminUsername && password == adminPassword) {
-        _showSuccessMessage('Admin login successful!');
+        // Navigate to admin page
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => AdminPage()),
+        );
       } else {
         _showErrorMessage('Invalid credentials for admin.');
       }
     } else if (_selectedRole == 'Student') {
       if (studentCredentials.containsKey(username) &&
           studentCredentials[username] == password) {
-        _showSuccessMessage('Student login successful!');
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => StudentPage(
+              studentId: username,
+              studentName: username == 'B220623EC' ? 'Abhinav' : 'Abhay',
+            ),
+          ),
+        );
       } else {
         _showErrorMessage('Invalid credentials for student.');
       }

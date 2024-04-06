@@ -3,6 +3,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:nitcattendify/action.dart';
+import 'package:nitcattendify/login.dart';
 
 import 'fulllog.dart'; // Import the FullLogPage.dart file
 
@@ -111,11 +113,23 @@ class _AdminPageState extends State<AdminPage> {
               icon: Icon(Icons.home),
               onPressed: () {
                 // Navigate to home page
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => LoginPage(),
+                  ),
+                );
               },
             ),
             IconButton(
               icon: Icon(Icons.person),
               onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ActionPage(),
+                  ),
+                );
                 // Navigate to profile page
               },
             ),

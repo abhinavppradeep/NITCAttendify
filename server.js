@@ -86,6 +86,6 @@ app.get('/api/last-10-tag-events', async (req, res) => {
 
 
 // Change the server to listen on the specified IP address and port
-app.listen(port,  () => {
+app.listen(port, '192.168.1.37', () => {
   console.log(`Server listening on port ${port}`);
 });
