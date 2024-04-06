@@ -3,7 +3,7 @@ const mysql = require('mysql2/promise');
 
 const app = express();
 const port = process.env.PORT || 3000;
-const ipAddress = '192.168.1.37'; 
+
 
 // Replace with your actual database credentials
 const pool = mysql.createPool({
@@ -85,6 +85,6 @@ app.get('/api/last-10-tag-events', async (req, res) => {
 });
 
 
-app.listen(port, ipAddress, () => {
+app.listen(port,  () => {
   console.log(`Server listening on port ${port}`);
 });
