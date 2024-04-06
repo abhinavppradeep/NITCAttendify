@@ -4,7 +4,6 @@ const mysql = require('mysql2/promise');
 const app = express();
 const port = process.env.PORT || 3000;
 
-
 // Replace with your actual database credentials
 const pool = mysql.createPool({
   host: 'mysql-27842026-abhinavppradeep2-dd53.a.aivencloud.com',
@@ -39,6 +38,7 @@ app.post('/api/data', async (req, res) => {
     res.status(500).send({ message: 'Error inserting data' });
   }
 });
+
 app.post('/api/tag-events', async (req, res) => {
   try {
     const { tagId, eventType, timestamp } = req.body;
@@ -65,7 +65,6 @@ app.get('/api/tag-event', async (req, res) => {
       timestamp: row.timestamp.toLocaleString(), // Convert timestamp to a readable format
     }));
     
-    
     res.json({ events });
   } catch (error) {
     console.error('Error fetching tag events:', error);
@@ -73,10 +72,10 @@ app.get('/api/tag-event', async (req, res) => {
   }
 });
 
-// Endpoint to get the last 10 tag events
+// Endpoint to get the last 10 tag events based on ID
 app.get('/api/last-10-tag-events', async (req, res) => {
   try {
-    const [rows, fields] = await pool.query('SELECT * FROM tag_events ORDER BY timestamp DESC LIMIT 10');
+    const [rows, fields] = await pool.query('SELECT * FROM tag_events ORDER BY id DESC LIMIT 10');
     res.json(rows);
   } catch (error) {
     console.error('Error fetching last 10 tag events:', error);
@@ -85,6 +84,8 @@ app.get('/api/last-10-tag-events', async (req, res) => {
 });
 
 
-app.listen(port,  () => {
+
+// Change the server to listen on the specified IP address and port
+app.listen(port, '192.168.1.37', () => {
   console.log(`Server listening on port ${port}`);
 });

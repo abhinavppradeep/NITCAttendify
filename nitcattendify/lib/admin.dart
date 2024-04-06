@@ -35,7 +35,7 @@ class _AdminPageState extends State<AdminPage> {
 
   Future<void> _fetchAllLogs() async {
     final response = await http
-        .get(Uri.parse('https://nitcattendify.onrender.com/api/tag-events'));
+        .get(Uri.parse('https://nitcattendify.onrender.com/api/tag-event'));
     if (response.statusCode == 200) {
       final List<dynamic> data = json.decode(response.body);
       setState(() {
