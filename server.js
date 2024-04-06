@@ -53,7 +53,7 @@ app.post('/api/tag-events', async (req, res) => {
   }
 });
 
-app.get('/api/tag-events', async (req, res) => {
+app.get('/api/tag-event', async (req, res) => {
   try {
     const [rows, fields] = await pool.query('SELECT * FROM tag_events');
     

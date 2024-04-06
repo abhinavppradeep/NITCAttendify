@@ -6,12 +6,12 @@ import 'package:http/http.dart' as http;
 
 import 'fulllog.dart'; // Import the FullLogPage.dart file
 
-class AdminPage extends StatefulWidget {
+class Fulllog extends StatefulWidget {
   @override
-  _AdminPageState createState() => _AdminPageState();
+  _FulllogState createState() => _FulllogState();
 }
 
-class _AdminPageState extends State<AdminPage> {
+class _FulllogState extends State<Fulllog> {
   List<Map<String, dynamic>> _logs = [];
 
   @override
@@ -21,8 +21,8 @@ class _AdminPageState extends State<AdminPage> {
   }
 
   Future<void> _fetchLogs() async {
-    final response = await http.get(
-        Uri.parse('https://nitcattendify.onrender.com/api/last-10-tag-events'));
+    final response = await http
+        .get(Uri.parse('https://nitcattendify.onrender.com/api/tag-events'));
     if (response.statusCode == 200) {
       final List<dynamic> data = json.decode(response.body);
       setState(() {
@@ -50,7 +50,7 @@ class _AdminPageState extends State<AdminPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Last 10 Tag Events'),
+        title: Text('Full Logs'),
       ),
       body: _logs.isEmpty
           ? Center(child: CircularProgressIndicator())
@@ -103,42 +103,6 @@ class _AdminPageState extends State<AdminPage> {
                 );
               },
             ),
-      bottomNavigationBar: BottomAppBar(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            IconButton(
-              icon: Icon(Icons.home),
-              onPressed: () {
-                // Navigate to home page
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.person),
-              onPressed: () {
-                // Navigate to profile page
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.refresh),
-              onPressed: () {
-                _fetchLogs(); // Refresh logs when refresh button is pressed
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.list),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Fulllog(),
-                  ),
-                );
-              },
-            ),
-          ],
-        ),
-      ),
     );
   }
 }

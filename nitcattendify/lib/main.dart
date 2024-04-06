@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nitcattendify/admin.dart';
 import 'package:nitcattendify/login.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LoginApp(),
+      home: AdminPage(),
     );
   }
 }
