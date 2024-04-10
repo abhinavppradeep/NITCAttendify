@@ -29,13 +29,12 @@ Email notifications for students from within the app
 Unknown RFID blocking for enhanced security
 Seamless integration with existing student databases
 Wi-Fi connectivity for the ESP8266, eliminating wired setup
-![WhatsApp Image 2024-04-08 at 17 35 28_8ecdf70a](https://github.com/abhinavppradeep/NITCAttendify/assets/122394425/0ed9a05c-b7a9-49d7-adab-ecfa4009c6a9)
-
-![WhatsApp Image 2024-04-08 at 17 35 29_707bf6a2](https://github.com/abhinavppradeep/NITCAttendify/assets/122394425/e30ee667-7620-4497-bb06-21f2fad7df7b)
-
-![WhatsApp Image 2024-04-08 at 17 35 30_4184d9bc](https://github.com/abhinavppradeep/NITCAttendify/assets/122394425/71583da5-d358-4f7e-b8d7-865abc6395c8)
-
-![WhatsApp Image 2024-04-09 at 08 01 16_02d38738](https://github.com/abhinavppradeep/NITCAttendify/assets/122394425/ff82d04c-c4d6-44ab-b43b-b05455c204a2)
+<div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+  <img src="https://github.com/abhinavppradeep/NITCAttendify/assets/122394425/0ed9a05c-b7a9-49d7-adab-ecfa4009c6a9" alt="Image 1" width="200"/>
+  <img src="https://github.com/abhinavppradeep/NITCAttendify/assets/122394425/e30ee667-7620-4497-bb06-21f2fad7df7b" alt="Image 2" width="200"/>
+  <img src="https://github.com/abhinavppradeep/NITCAttendify/assets/122394425/71583da5-d358-4f7e-b8d7-865abc6395c8" alt="Image 3" width="200"/>
+  <img src="https://github.com/abhinavppradeep/NITCAttendify/assets/122394425/ff82d04c-c4d6-44ab-b43b-b05455c204a2" alt="Image 4" width="200"/>
+</div>
 
 ## Hardware Setup :wrench:
 
