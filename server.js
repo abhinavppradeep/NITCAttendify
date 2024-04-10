@@ -6,9 +6,9 @@ const port = process.env.PORT || 3000;
 
 // Replace with your actual database credentials
 const pool = mysql.createPool({
-  host: 'mysql-27842026-abhinavppradeep2-dd53.a.aivencloud.com',
-  user: 'avnadmin',
-  password: 'AVNS_YhIzTQTBXpAEJSL2kqy',
+  host: 'add your host name',
+  user: 'add your username',
+  password: 'your password',
   database: 'defaultdb',
   port: 15035,
 });
