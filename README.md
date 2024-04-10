@@ -29,19 +29,21 @@ Email notifications for students from within the app
 Unknown RFID blocking for enhanced security
 Seamless integration with existing student databases
 Wi-Fi connectivity for the ESP8266, eliminating wired setup
+![WhatsApp Image 2024-04-08 at 17 35 28_8ecdf70a](https://github.com/abhinavppradeep/NITCAttendify/assets/122394425/0ed9a05c-b7a9-49d7-adab-ecfa4009c6a9)
+
+![WhatsApp Image 2024-04-08 at 17 35 29_707bf6a2](https://github.com/abhinavppradeep/NITCAttendify/assets/122394425/e30ee667-7620-4497-bb06-21f2fad7df7b)
+
+![WhatsApp Image 2024-04-08 at 17 35 30_4184d9bc](https://github.com/abhinavppradeep/NITCAttendify/assets/122394425/71583da5-d358-4f7e-b8d7-865abc6395c8)
+
+![WhatsApp Image 2024-04-09 at 08 01 16_02d38738](https://github.com/abhinavppradeep/NITCAttendify/assets/122394425/ff82d04c-c4d6-44ab-b43b-b05455c204a2)
+
 ## Hardware Setup :wrench:
 
 Connect the RFID MFRC522 module to the ESP8266 as follows:
 
-SDA pin → GPIO5
-SCK pin → GPIO14
-MOSI pin → GPIO13
-MISO pin → GPIO12
-IRQ pin → Not used
-GND pin → GND
-RST pin → GPIO0
-3.3V pin → 3.3V
+
 Power up the ESP8266 using a suitable power source.
+![wiring-rfid-attendance](https://github.com/abhinavppradeep/NITCAttendify/assets/122394425/a1d6b7e2-4857-4283-ac29-ed0200e92f08)
 
 ## Software Setup :computer:
 
