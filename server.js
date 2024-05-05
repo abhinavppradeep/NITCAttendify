@@ -6,9 +6,9 @@ const port = process.env.PORT || 3000;
 
 // Replace with your actual database credentials
 const pool = mysql.createPool({
-  host: 'add your host name',
-  user: 'add your username',
-  password: 'your password',
+  host: 'mysql-27842026-abhinavppradeep2-dd53.a.aivencloud.com',
+  user: 'avnadmin',
+  password: 'AVNS_YhIzTQTBXpAEJSL2kqy',
   database: 'defaultdb',
   port: 15035,
 });
@@ -86,6 +86,6 @@ app.get('/api/last-10-tag-events', async (req, res) => {
 
 
 // Change the server to listen on the specified IP address and port
-app.listen(port, '192.168.1.37', () => {
+app.listen(port, '192.168.51.233', () => {
   console.log(`Server listening on port ${port}`);
 });
